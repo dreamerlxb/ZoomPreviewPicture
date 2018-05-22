@@ -2,13 +2,10 @@ package com.previewlibrary.loader;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.os.Parcelable;
-import android.preference.Preference;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 /**
- *
  * @author yangc
  * date 2017/9/4
  * E-Mail:yangchaojiang@outlook.com

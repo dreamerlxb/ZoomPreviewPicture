@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
@@ -22,14 +23,15 @@ import com.previewlibrary.loader.MySimpleTarget;
 public class TestImageLoader implements IZoomMediaLoader {
 
     @Override
-    public void displayImage(@NonNull Fragment context,@NonNull String path, final@NonNull MySimpleTarget<Bitmap> simpleTarget) {
-        Glide.with(context).load(path).asBitmap() .centerCrop() .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+    public void displayImage(@NonNull Fragment context, @NonNull String path, final @NonNull MySimpleTarget<Bitmap> simpleTarget) {
+        Glide.with(context).load(path).asBitmap().centerCrop().diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .error(R.drawable.ic_default_image)
                 .into(new SimpleTarget<Bitmap>() {
                     @Override
                     public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
                         simpleTarget.onResourceReady(resource);
                     }
+
                     @Override
                     public void onLoadStarted(Drawable placeholder) {
                         super.onLoadStarted(placeholder);
@@ -47,12 +49,11 @@ public class TestImageLoader implements IZoomMediaLoader {
 
     @Override
     public void onStop(@NonNull Fragment context) {
-          Glide.with(context).onStop();
-
+        Glide.with(context).onStop();
     }
 
     @Override
     public void clearMemory(@NonNull Context c) {
-             Glide.get(c).clearMemory();
+        Glide.get(c).clearMemory();
     }
 }

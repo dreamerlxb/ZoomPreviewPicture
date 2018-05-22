@@ -11,6 +11,7 @@ import com.example.previewpicture.bean.UserViewInfo;
 import com.example.previewpicture.nine.adapter.PostAdapter;
 import com.example.previewpicture.nine.entity.Post;
 import com.jaeger.ninegridimageview.NineGridImageView;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Random;
 
 /**
  * Created by Jaeger on 16/2/24.
- *
+ * <p>
  * Email: chjie.jaeger@gmail.com
  * GitHub: https://github.com/laobie
  */
@@ -28,11 +29,16 @@ public class GridStyleActivity extends BaseActivity {
     private PostAdapter mNineImageAdapter;
     private List<Post> mPostList;
     private String[] IMG_URL_LIST = {
-        "http://ac-QYgvX1CC.clouddn.com/36f0523ee1888a57.jpg", "http://ac-QYgvX1CC.clouddn.com/07915a0154ac4a64.jpg",
-        "http://ac-QYgvX1CC.clouddn.com/9ec4bc44bfaf07ed.jpg", "http://ac-QYgvX1CC.clouddn.com/fa85037f97e8191f.jpg",
-        "http://ac-QYgvX1CC.clouddn.com/de13315600ba1cff.jpg", "http://ac-QYgvX1CC.clouddn.com/15c5c50e941ba6b0.jpg",
-        "http://ac-QYgvX1CC.clouddn.com/10762c593798466a.jpg", "http://ac-QYgvX1CC.clouddn.com/eaf1c9d55c5f9afd.jpg",
-        "http://ac-QYgvX1CC.clouddn.com/ad99de83e1e3f7d4.jpg", "http://ac-QYgvX1CC.clouddn.com/233a5f70512befcc.jpg",
+            "http://img44.photophoto.cn/20170731/0847085207211178_s.jpg",
+            "http://img44.photophoto.cn/20170728/0017030319740534_s.jpg",
+            "http://img44.photophoto.cn/20170731/0838084002855326_s.jpg",
+            "http://img44.photophoto.cn/20170728/0847085969586424_s.jpg",
+            "http://img44.photophoto.cn/20170727/0014105802293676_s.jpg",
+            "http://img44.photophoto.cn/20170729/0847085226124343_s.jpg",
+            "http://img44.photophoto.cn/20170728/0847085200668628_s.jpg",
+            "http://img44.photophoto.cn/20170728/0847085246003750_s.jpg",
+            "http://img44.photophoto.cn/20170728/0847085012707934_s.jpg",
+            "http://img44.photophoto.cn/20170729/0005018303330857_s.jpg",
     };
 
     @Override
@@ -41,16 +47,16 @@ public class GridStyleActivity extends BaseActivity {
         this.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         setContentView(R.layout.activity_recycler);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-        mRvPostLister = (RecyclerView) findViewById(R.id.rv_post_list);
+        mRvPostLister = findViewById(R.id.rv_post_list);
         final LinearLayoutManager manager = new LinearLayoutManager(this);
         mRvPostLister.setLayoutManager(manager);
         mPostList = new ArrayList<>();
         for (int i = 0; i < 29; i++) {
             List<UserViewInfo> imgUrls = new ArrayList<>();
             UserViewInfo userViewInfo;
-            Random ss=new Random();
-            for (int j = 0; j <ss.nextInt(9); j++) {
-                userViewInfo=new UserViewInfo(IMG_URL_LIST[j]);
+            Random ss = new Random();
+            for (int j = 0; j < ss.nextInt(9); j++) {
+                userViewInfo = new UserViewInfo(IMG_URL_LIST[j]);
                 imgUrls.add(userViewInfo);
             }
             Post post = new Post("Am I handsome? Am I handsome? Am I handsome?", imgUrls);

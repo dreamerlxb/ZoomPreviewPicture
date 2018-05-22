@@ -16,12 +16,13 @@ import com.example.previewpicture.bean.UserViewInfo;
  * Deprecated:
  */
 
-public class MyBaseQuickAdapter extends BaseQuickAdapter<UserViewInfo,BaseViewHolder> {
+public class MyBaseQuickAdapter extends BaseQuickAdapter<UserViewInfo, BaseViewHolder> {
     public static final String TAG = "MyBaseQuickAdapter";
-  private  Context context;
+    private Context context;
+
     public MyBaseQuickAdapter(Context context) {
         super(R.layout.item_image);
-        this.context=context;
+        this.context = context;
     }
 
     @Override
@@ -31,6 +32,6 @@ public class MyBaseQuickAdapter extends BaseQuickAdapter<UserViewInfo,BaseViewHo
                 .load(item.getUrl())
                 .error(R.mipmap.ic_iamge_zhanwei)
                 .into(thumbView);
-        helper.getView(R.id.iv).setTag(R.id.iv,item.getUrl());
+        helper.getView(R.id.iv).setTag(R.id.iv, item.getUrl());
     }
 }

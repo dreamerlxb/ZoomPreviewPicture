@@ -14,7 +14,7 @@ import java.util.List;
 public class ViewPagerActivity extends AppCompatActivity {
     private ArrayList<UserViewInfo> mThumbViewInfoList = new ArrayList<>();
     ViewPager mViewPager;
-    private MyPagerAdaper adapter;
+    private MyPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +26,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         for (int i = 0; i < 1; i++) {
             mThumbViewInfoList.add(new UserViewInfo(urls.get(i)));
         }
-        adapter = new MyPagerAdaper(mThumbViewInfoList, this);
+        adapter = new MyPagerAdapter(mThumbViewInfoList, this);
         mViewPager.setAdapter(adapter);
-
     }
-
 }

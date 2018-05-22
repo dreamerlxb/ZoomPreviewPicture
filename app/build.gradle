@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.example.previewpicture"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -21,21 +20,21 @@ android {
         abortOnError false
     }
 
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.9.0'
-    compile project(':ImagePreview')
-    compile 'com.simplepeng.library:transformslibrary:1.0.0'
-    compile 'com.jaeger.ninegridimageview:library:1.1.0'
-    // compile 'com.ycjiang:ImagePreview:2.0.8'
-
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.9.0'
+    implementation project(':ImagePreview')
+    implementation 'com.simplepeng.library:transformslibrary:1.0.0'
+    implementation 'com.jaeger.ninegridimageview:library:1.1.1'
 }

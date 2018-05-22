@@ -29,7 +29,7 @@ public class GridViewCustomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid);
         type = getIntent().getIntExtra("type", 0);
-        listView = (GridView) findViewById(R.id.listView);
+        listView = findViewById(R.id.listView);
         //准备数据
         List<String> urls = ImageUrlConfig.getUrls();
         for (int i = 0; i < urls.size(); i++) {
@@ -68,8 +68,6 @@ public class GridViewCustomActivity extends AppCompatActivity {
                             .setType(GPreviewBuilder.IndicatorType.Dot)
                             .start();
                 }
-
-
             }
         });
     }

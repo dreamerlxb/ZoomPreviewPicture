@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -45,7 +46,7 @@ public class BasePhotoFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_image_photo_layout, container, false);
     }
 
@@ -67,7 +68,7 @@ public class BasePhotoFragment extends Fragment {
 
     @CallSuper
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initView(view);
         initDate();
@@ -119,8 +120,8 @@ public class BasePhotoFragment extends Fragment {
      * 初始化控件
      */
     private void initView(View view) {
-        loading = (ProgressBar) view.findViewById(R.id.loading);
-        imageView = (SmoothImageView) view.findViewById(R.id.photoView);
+        loading = view.findViewById(R.id.loading);
+        imageView = view.findViewById(R.id.photoView);
         rootView = view.findViewById(R.id.rootView);
         rootView.setDrawingCacheEnabled(false);
         imageView.setDrawingCacheEnabled(false);

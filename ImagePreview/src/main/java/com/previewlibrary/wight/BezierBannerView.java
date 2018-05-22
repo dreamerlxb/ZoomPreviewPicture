@@ -1,4 +1,5 @@
 package com.previewlibrary.wight;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -86,7 +87,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
     public static int DIRECTION_LEFT = 1;
     //向左滑 向右滚动
     public static int DIRECTION_RIGHT = 2;
-    private static final String TAG=BezierBannerView.class.getName();
+    private static final String TAG = BezierBannerView.class.getName();
 
     Interpolator accelerateinterpolator = new AccelerateDecelerateInterpolator();
 
@@ -124,12 +125,12 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
     }
 
     private void initattrs(AttributeSet attrs) {
-        TypedArray typedArray=getContext().obtainStyledAttributes(attrs,R.styleable.BezierBannerView);
-        mSelectedColor=typedArray.getColor(R.styleable.BezierBannerView_selectedColor,0xFFFFFFFF);
-        mUnSelectedColor=typedArray.getColor(R.styleable.BezierBannerView_unSelectedColor,0xFFAAAAAA);
-        mRadius=typedArray.getDimension(R.styleable.BezierBannerView_selectedRaduis,mRadius);
-        mNomarlRadius=typedArray.getDimension(R.styleable.BezierBannerView_unSelectedRaduis,mNomarlRadius);
-        distance=typedArray.getDimension(R.styleable.BezierBannerView_spacing,distance);
+        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.BezierBannerView);
+        mSelectedColor = typedArray.getColor(R.styleable.BezierBannerView_selectedColor, 0xFFFFFFFF);
+        mUnSelectedColor = typedArray.getColor(R.styleable.BezierBannerView_unSelectedColor, 0xFFAAAAAA);
+        mRadius = typedArray.getDimension(R.styleable.BezierBannerView_selectedRaduis, mRadius);
+        mNomarlRadius = typedArray.getDimension(R.styleable.BezierBannerView_unSelectedRaduis, mNomarlRadius);
+        distance = typedArray.getDimension(R.styleable.BezierBannerView_spacing, distance);
         typedArray.recycle();
     }
 
@@ -200,11 +201,11 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         canvas.drawPath(mPath, mCirclePaint);
 
         canvas.restore();
-
     }
 
     /**
      * 转化整体进度值使两个阶段的运动进度都是0-1
+     *
      * @param progress 当前整体进度
      */
     public void setProgress(float progress) {
@@ -224,7 +225,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         if (mDrection == DIRECTION_RIGHT) {
             moveToNext();
         } else {
-            moveToPrivous();
+            moveToPrevious();
         }
         invalidate();
     }
@@ -333,7 +334,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
     /**
      * 向左移动(与向右过程大致相同)
      */
-    private void moveToPrivous() {
+    private void moveToPrevious() {
         mPath.reset();
         mPath2.reset();
 
@@ -421,8 +422,9 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
 
     /**
      * 获取当前值(适用分阶段变化的值)
+     *
      * @param start 初始值
-     * @param end  终值
+     * @param end   终值
      * @param step  第几活动阶段
      * @return float
      */
@@ -433,10 +435,12 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
             return start + (end - start) * mProgress2;
         }
     }
+
     /**
      * 获取当前值（适用全过程变化的值）
+     *
      * @param start 初始值
-     * @param end  终值
+     * @param end   终值
      * @return float
      */
     public float getValueForAll(float start, float end) {
@@ -445,8 +449,9 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
 
     /**
      * 通过进度获取当前值
-     * @param start 初始值
-     * @param end 终值
+     *
+     * @param start    初始值
+     * @param end      终值
      * @param progress 当前进度
      * @return float
      */
@@ -456,6 +461,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
 
     /**
      * 获取圆心X坐标
+     *
      * @param index 第几个圆
      * @return float
      */
@@ -481,14 +487,15 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
 
     /**
      * 绑定viewpager
+     *
      * @param viewPager viewPager
      */
     public void attachToViewpager(ViewPager viewPager) {
         viewPager.addOnPageChangeListener(this);
         count = viewPager.getAdapter().getCount();
-        mSelectedIndex=viewPager.getCurrentItem();
+        mSelectedIndex = viewPager.getCurrentItem();
         moveToNext();
-        mDrection=DIRECTION_RIGHT;
+        mDrection = DIRECTION_RIGHT;
         invalidate();
     }
 

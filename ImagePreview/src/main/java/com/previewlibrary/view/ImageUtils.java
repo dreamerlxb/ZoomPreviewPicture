@@ -7,9 +7,9 @@ import com.previewlibrary.R;
 
 /**
  * @author yangc
- *         date 2017/11/22
- *         E-Mail:yangchaojiang@outlook.com
- *         Deprecated:
+ * date 2017/11/22
+ * E-Mail:yangchaojiang@outlook.com
+ * Deprecated:
  */
 
 public class ImageUtils {
@@ -28,7 +28,7 @@ public class ImageUtils {
         return result;
     }
 
-    public static boolean isLongPressed(float lastX, float lastY, float thisX, float thisY, long lastDownTime, long thisEventTime,long longPressTime) {
+    public static boolean isLongPressed(float lastX, float lastY, float thisX, float thisY, long lastDownTime, long thisEventTime, long longPressTime) {
 
         float offsetX = Math.abs(thisX - lastX);
 
@@ -37,12 +37,8 @@ public class ImageUtils {
         long intervalTime = thisEventTime - lastDownTime;
 
         if (offsetX <= 10 && offsetY <= 10 && intervalTime >= longPressTime) {
-
             return true;
-
         }
-
         return false;
-
     }
 }

@@ -126,14 +126,14 @@ public class GPreviewActivity extends FragmentActivity {
      */
     @SuppressLint("StringFormatMatches")
     private void initView() {
-        viewPager = (PhotoViewPager) findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
         //viewPager的适配器
         PhotoPagerAdapter adapter = new PhotoPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(currentIndex);
         viewPager.setOffscreenPageLimit(3);
-        bezierBannerView = (BezierBannerView) findViewById(R.id.bezierBannerView);
-        ltAddDot = (TextView) findViewById(R.id.ltAddDot);
+        bezierBannerView = findViewById(R.id.bezierBannerView);
+        ltAddDot = findViewById(R.id.ltAddDot);
         if (type == GPreviewBuilder.IndicatorType.Dot) {
             bezierBannerView.setVisibility(View.VISIBLE);
             bezierBannerView.attachToViewpager(viewPager);
@@ -176,8 +176,6 @@ public class GPreviewActivity extends FragmentActivity {
                 fragment.transformIn();
             }
         });
-
-
     }
 
     /***退出预览的动画***/
@@ -268,6 +266,4 @@ public class GPreviewActivity extends FragmentActivity {
             super.destroyItem(container, position, object);
         }
     }
-
-
 }

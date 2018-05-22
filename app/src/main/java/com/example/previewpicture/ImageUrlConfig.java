@@ -54,17 +54,17 @@ public final class ImageUrlConfig {
         sUrls.add("http://img1.imgtn.bdimg.com/it/u=3016675040,1510439865&fm=21&gp=0.jpg");
         sUrls.add("http://photocdn.sohu.com/20160307/mp62252655_1457334772519_2.png");
         sUrls.add("http://d040779c2cd49.scdn.itc.cn/s_big/pic/20161213/184474627873966848.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/36f0523ee1888a57.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/07915a0154ac4a64.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/9ec4bc44bfaf07ed.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/fa85037f97e8191f.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/de13315600ba1cff.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/9ec4bc44bfaf07ed.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/fa85037f97e8191f.jpg");
-        sUrls.add("ttp://ac-QYgvX1CC.clouddn.com/de13315600ba1cff.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/ad99de83e1e3f7d4.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/15c5c50e941ba6b0.jpg");
-        sUrls.add("http://ac-QYgvX1CC.clouddn.com/eaf1c9d55c5f9afd.jpg");
+        sUrls.add("http://pic10.photophoto.cn/20090224/0036036802407491_b.jpg");
+        sUrls.add("http://imgsrc.baidu.com/imgad/pic/item/2934349b033b5bb574039a2a3cd3d539b700bc0a.jpg");
+        sUrls.add("http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/14/c0391a6c1efab3fe00911b04e8cedca4.jpg");
+        sUrls.add("http://img02.tooopen.com/images/20160506/tooopen_sy_161751648488.jpg");
+        sUrls.add("http://img1.imgtn.bdimg.com/it/u=1812408136,1922560783&fm=214&gp=0.jpg");
+        sUrls.add("http://pic29.nipic.com/20130602/7447430_184522468000_2.jpg");
+        sUrls.add("http://img5.duitang.com/uploads/item/201408/28/20140828223716_BMw8C.jpeg");
+        sUrls.add("http://img2.imgtn.bdimg.com/it/u=670050120,1948190456&fm=27&gp=0.jpg");
+        sUrls.add("http://f2.topitme.com/2/7e/63/1126335560453637e2o.jpg");
+        sUrls.add("http://imglf2.ph.126.net/Ugj0-Qj4k_Kwo1PWtN_VFA==/6630332192420647058.jpg");
+        sUrls.add("http://imgsrc.baidu.com/imgad/pic/item/a044ad345982b2b7bc05f4e93aadcbef76099b01.jpg");
         sUrls.add("http://pic44.photophoto.cn/20170802/0017030376585114_b.jpg");
         sUrls.add("http://img44.photophoto.cn/20170727/0847085702814554_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170802/0017030319134956_s.jpg");
@@ -476,7 +476,6 @@ public final class ImageUrlConfig {
         sUrls.add("http://img44.photophoto.cn/20170727/0847085275244570_s.jpg");
 
 
-
         sUrls.add("http://img44.photophoto.cn/20170731/0847085207211178_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170728/0017030319740534_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170731/0838084002855326_s.jpg");
@@ -503,36 +502,6 @@ public final class ImageUrlConfig {
         sUrls.add("http://img44.photophoto.cn/20170729/0847085786392651_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170728/0847085761440022_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170727/0847085275244570_s.jpg");
-
-
-
-        sUrls.add("http://img44.photophoto.cn/20170731/0847085207211178_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0017030319740534_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170731/0838084002855326_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0847085969586424_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170727/0014105802293676_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170727/0847085242661101_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170727/0886088744582079_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170801/0017029514287804_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170730/0018090594006661_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170729/0847085848134910_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170729/0847085581124963_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170729/0847085226124343_s.jpg");
-
-        sUrls.add("http://img44.photophoto.cn/20170729/0847085226124343_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0847085200668628_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0847085246003750_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0847085012707934_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170729/0005018303330857_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170729/0847085231427344_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170729/0847085236829578_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0847085729490157_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170727/0847085751995287_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0847085729043617_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170729/0847085786392651_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170728/0847085761440022_s.jpg");
-        sUrls.add("http://img44.photophoto.cn/20170727/0847085275244570_s.jpg");
-
 
 
         sUrls.add("http://img44.photophoto.cn/20170731/0847085207211178_s.jpg");
@@ -563,7 +532,6 @@ public final class ImageUrlConfig {
         sUrls.add("http://img44.photophoto.cn/20170727/0847085275244570_s.jpg");
 
 
-
         sUrls.add("http://img44.photophoto.cn/20170731/0847085207211178_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170728/0017030319740534_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170731/0838084002855326_s.jpg");
@@ -591,6 +559,33 @@ public final class ImageUrlConfig {
         sUrls.add("http://img44.photophoto.cn/20170728/0847085761440022_s.jpg");
         sUrls.add("http://img44.photophoto.cn/20170727/0847085275244570_s.jpg");
 
+
+        sUrls.add("http://img44.photophoto.cn/20170731/0847085207211178_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0017030319740534_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170731/0838084002855326_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0847085969586424_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170727/0014105802293676_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170727/0847085242661101_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170727/0886088744582079_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170801/0017029514287804_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170730/0018090594006661_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170729/0847085848134910_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170729/0847085581124963_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170729/0847085226124343_s.jpg");
+
+        sUrls.add("http://img44.photophoto.cn/20170729/0847085226124343_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0847085200668628_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0847085246003750_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0847085012707934_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170729/0005018303330857_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170729/0847085231427344_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170729/0847085236829578_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0847085729490157_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170727/0847085751995287_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0847085729043617_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170729/0847085786392651_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170728/0847085761440022_s.jpg");
+        sUrls.add("http://img44.photophoto.cn/20170727/0847085275244570_s.jpg");
 
 
         sUrls.add("http://img44.photophoto.cn/20170731/0847085207211178_s.jpg");

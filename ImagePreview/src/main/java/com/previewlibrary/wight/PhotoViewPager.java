@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**
- *
  * @author yangc
  * date 2017/4/26
  * E-Mail:yangchaojiang@outlook.com

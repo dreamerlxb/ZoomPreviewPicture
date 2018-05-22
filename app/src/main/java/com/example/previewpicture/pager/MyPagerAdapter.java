@@ -3,6 +3,7 @@ package com.example.previewpicture.pager;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Rect;
+import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,20 +23,18 @@ import java.util.List;
  * date 2018/1/14
  * E-Mail:yangchaojiang@outlook.com
  * Deprecated:
+ *
  * @author yangc
  */
 
-public class MyPagerAdaper extends PagerAdapter {
+public class MyPagerAdapter extends PagerAdapter {
     private Context mContext;
     private List<UserViewInfo> mThumbViewInfoList = new ArrayList<>();
 
-    public MyPagerAdaper(List<UserViewInfo> list, Context mContext) {
+    public MyPagerAdapter(List<UserViewInfo> list, Context mContext) {
         this.mThumbViewInfoList = list;
         this.mContext = mContext;
-
     }
-
-    ;
 
     @Override
     public int getCount() {
@@ -43,12 +42,13 @@ public class MyPagerAdaper extends PagerAdapter {
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
-        return view==object;
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+        return view == object;
     }
 
+    @NonNull
     @Override
-    public Object instantiateItem(ViewGroup container,   int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageView view = (ImageView) LayoutInflater.from(mContext).inflate(R.layout.item_image2, container, false);
         Glide.with(mContext)
                 .load(mThumbViewInfoList.get(position).getUrl())
@@ -72,7 +72,7 @@ public class MyPagerAdaper extends PagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((View) object);
     }
 

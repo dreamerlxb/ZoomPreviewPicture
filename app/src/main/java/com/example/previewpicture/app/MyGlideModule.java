@@ -17,7 +17,7 @@ import com.example.previewpicture.R;
  * GlideModule 图片加载缓存
  */
 public class MyGlideModule implements GlideModule {
-  public static   int cacheSize100MegaBytes = 504857600;
+    public static int cacheSize100MegaBytes = 504857600;
 
     @Override
     public void applyOptions(final Context context, GlideBuilder builder) {
@@ -28,7 +28,7 @@ public class MyGlideModule implements GlideModule {
         int customMemoryCacheSize = (int) (1.2 * defaultMemoryCacheSize);
         int customBitmapPoolSize = (int) (1.2 * defaultBitmapPoolSize);
         builder.setMemoryCache(new LruResourceCache(customMemoryCacheSize));
-         builder.setBitmapPool(new LruBitmapPool(customBitmapPoolSize));
+        builder.setBitmapPool(new LruBitmapPool(customBitmapPoolSize));
         builder.setDiskCache(new InternalCacheDiskCacheFactory(context, cacheSize100MegaBytes));
     }
 
