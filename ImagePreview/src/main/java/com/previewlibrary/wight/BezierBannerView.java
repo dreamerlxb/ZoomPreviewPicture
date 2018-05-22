@@ -89,7 +89,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
     public static int DIRECTION_RIGHT = 2;
     private static final String TAG = BezierBannerView.class.getName();
 
-    Interpolator accelerateinterpolator = new AccelerateDecelerateInterpolator();
+    Interpolator accelerateInterpolator = new AccelerateDecelerateInterpolator();
 
 
     public BezierBannerView(Context context) {
@@ -102,7 +102,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
 
     public BezierBannerView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initattrs(attrs);
+        initAttrs(attrs);
         initPaint();
     }
 
@@ -124,7 +124,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
 
     }
 
-    private void initattrs(AttributeSet attrs) {
+    private void initAttrs(AttributeSet attrs) {
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.BezierBannerView);
         mSelectedColor = typedArray.getColor(R.styleable.BezierBannerView_selectedColor, 0xFFFFFFFF);
         mUnSelectedColor = typedArray.getColor(R.styleable.BezierBannerView_unSelectedColor, 0xFFAAAAAA);
@@ -163,7 +163,6 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         }
 
         setMeasuredDimension(mWidth, mHeight);
-
     }
 
     @Override
@@ -238,7 +237,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         mPath.reset();
         mPath2.reset();
         //使用一个插值器使圆的大小变化两边慢中间快
-        float mRadiusProgress = accelerateinterpolator.getInterpolation(mOriginProgress);
+        float mRadiusProgress = accelerateInterpolator.getInterpolation(mOriginProgress);
         //----------------------选中圆--------------------------------
         //起始圆圆心
         mCenterPointX = getValue(getCenterPointAt(mSelectedIndex), getCenterPointAt(mSelectedIndex + 1) - mRadius, MOVE_STEP_TWO);
@@ -338,7 +337,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         mPath.reset();
         mPath2.reset();
 
-        float mRadiusProgress = accelerateinterpolator.getInterpolation(mOriginProgress);
+        float mRadiusProgress = accelerateInterpolator.getInterpolation(mOriginProgress);
 
         //----------------------选中圆--------------------------------
         mCenterPointX = getValue(getCenterPointAt(mSelectedIndex), getCenterPointAt(mSelectedIndex - 1) + mRadius, MOVE_STEP_TWO);
@@ -416,7 +415,6 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         mPath2.lineTo(endPoint_support_nextX, mRadius + mSupport_Next_radianY);
         mPath2.quadTo(controlPointX_Next, controlPointY_Next, startPoint_support_nextX, startPoint_support_nextY + 2 * mY_next);
         mPath2.lineTo(startPoint_support_nextX, startPoint_support_nextY);
-
     }
 
 
@@ -499,7 +497,6 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         invalidate();
     }
 
-
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         //偏移量为0 说明运动停止
@@ -512,7 +509,7 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         if (position + positionOffset - mSelectedIndex > 0) {
             mDrection = DIRECTION_RIGHT;
             //向左快速滑动 偏移量不归0 但是position发生了改变 需要更新当前索引
-            if (mDrection == DIRECTION_RIGHT && position + positionOffset > mSelectedIndex + 1) {
+            if (position + positionOffset > mSelectedIndex + 1) {
                 mSelectedIndex = position;
                 Log.d(TAG, "向左快速滑动");
             } else {
@@ -521,14 +518,13 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
         } else if (position + positionOffset - mSelectedIndex < 0) { //向右滑，指示器向左移动
             mDrection = DIRECTION_LEFT;
             //向右快速滑动
-            if (mDrection == DIRECTION_LEFT && position + positionOffset < mSelectedIndex - 1) {
+            if (position + positionOffset < mSelectedIndex - 1) {
                 mSelectedIndex = position;
                 Log.d(TAG, "向右快速滑动");
             } else {
                 setProgress(1 - positionOffset);
             }
         }
-
     }
 
     @Override
@@ -540,5 +536,4 @@ public class BezierBannerView extends View implements ViewPager.OnPageChangeList
     public void onPageScrollStateChanged(int state) {
 
     }
-
 }

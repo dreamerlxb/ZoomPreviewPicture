@@ -98,7 +98,6 @@ public class GPreviewActivity extends FragmentActivity {
         } catch (Exception e) {
             iniFragment(imgUrls, currentIndex, BasePhotoFragment.class);
         }
-
     }
 
     /**
@@ -171,7 +170,7 @@ public class GPreviewActivity extends FragmentActivity {
         viewPager.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                viewPager.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 BasePhotoFragment fragment = fragments.get(currentIndex);
                 fragment.transformIn();
             }

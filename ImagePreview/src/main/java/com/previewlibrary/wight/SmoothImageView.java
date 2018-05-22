@@ -36,7 +36,6 @@ public class SmoothImageView extends PhotoView {
         STATE_IN,
         STATE_OUT,
         STATE_MOVE,
-
     }
 
     private Status mStatus = Status.STATE_NORMAL;

@@ -20,7 +20,6 @@ import java.util.List;
 public class RecycleViewActivity extends Activity {
     private ArrayList<UserViewInfo> mThumbViewInfoList = new ArrayList<>();
     private GridLayoutManager mGridLayoutManager;
-    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,7 @@ public class RecycleViewActivity extends Activity {
         for (int i = 0; i < 30; i++) {
             mThumbViewInfoList.add(new UserViewInfo(urls.get(i)));
         }
-        mRecyclerView = findViewById(R.id.recycler_view);
+        RecyclerView mRecyclerView = findViewById(R.id.recycler_view);
         mGridLayoutManager = new GridLayoutManager(this, 2);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
         mRecyclerView.setHasFixedSize(true);

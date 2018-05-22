@@ -14,19 +14,18 @@ import java.util.List;
 public class ViewPagerActivity extends AppCompatActivity {
     private ArrayList<UserViewInfo> mThumbViewInfoList = new ArrayList<>();
     ViewPager mViewPager;
-    private MyPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewpager);
-        mViewPager = (ViewPager) findViewById(R.id.mViewPager);
+        mViewPager = findViewById(R.id.mViewPager);
         //准备数据
         List<String> urls = ImageUrlConfig.getUrls();
         for (int i = 0; i < 1; i++) {
             mThumbViewInfoList.add(new UserViewInfo(urls.get(i)));
         }
-        adapter = new MyPagerAdapter(mThumbViewInfoList, this);
+        MyPagerAdapter adapter = new MyPagerAdapter(mThumbViewInfoList, this);
         mViewPager.setAdapter(adapter);
     }
 }

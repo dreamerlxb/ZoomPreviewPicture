@@ -31,5 +31,4 @@ public interface MySimpleTarget<T> {
      * Callback invoked right before your request is submitted.
      */
     void onLoadStarted();
-
 }
